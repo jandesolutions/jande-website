@@ -3,19 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>J and E Solutions</title>
-<meta name="description" content="J and E Solutions provides reliable construction, maintenance, and remodeling services for residential, commercial, and industrial clients in the Bay Area. Licensed and bonded contractor.">
 
-<meta name="keywords" content="construction services, remodeling contractor, home repairs, commercial maintenance, industrial maintenance, ADU builder, Bay Area contractor, licensed contractor California">
+<title>J and E Solutions | Construction, Maintenance & Remodeling Services</title>
 
-<meta name="author" content="J and E Solutions">
-
+<meta name="description" content="J and E Solutions provides construction, remodeling, and maintenance services for residential, commercial, and industrial clients across the Bay Area. Licensed and bonded contractor.">
+<meta name="keywords" content="construction contractor, remodeling, home repairs, ADU construction, commercial maintenance, Bay Area contractor, San Jose contractor, Santa Cruz construction, Monterey contractor">
 <meta name="robots" content="index, follow">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<meta name="geo.region" content="US-CA">
-<meta name="geo.placename" content="Bay Area California">
-<meta name="geo.position" content="37.3688;-121.9310">
-<meta name="ICBM" content="37.3688, -121.9310">
+
 <style>
   body {
     margin: 0;
@@ -25,48 +21,44 @@
   }
 
   /* HERO */
-    .hero {
-  text-align: center;
-  padding: 100px 20px;
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #121212, #0b0b0c);
+  }
 
-  /* Clean professional base + subtle texture */
-  background:
-    linear-gradient(135deg, #111, #0b0b0c);
-
-  background-size: cover;
-  background-position: center;
-}
-}
-
-  .logo-box {
-    width: 85px;
-    height: 85px;
-    border: 2px solid #d4af37;
+  .logo {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
-    font-size: 26px;
     font-weight: 700;
-    color: #d4af37;
     letter-spacing: 2px;
   }
 
-  .hero h1 {
-    font-size: 52px;
+  h1 {
+    font-size: 48px;
     margin-bottom: 10px;
-    font-weight: 600;
   }
 
-  .hero p {
-    font-size: 18px;
-    color: #cfcfcf;
-    margin-bottom: 8px;
+  .tagline {
+    font-size: 20px;
+    color: #e5e5e5;
+    margin-bottom: 10px;
+  }
+
+  .subtext {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
   }
 
   .btn {
     display: inline-block;
-    padding: 14px 26px;
+    padding: 14px 24px;
     margin: 10px;
     border-radius: 6px;
     text-decoration: none;
@@ -74,7 +66,7 @@
   }
 
   .btn-primary {
-    background: #ffffff;
+    background: #fff;
     color: #000;
   }
 
@@ -83,6 +75,7 @@
     color: #fff;
   }
 
+  /* SECTIONS */
   section {
     padding: 70px 20px;
     max-width: 1000px;
@@ -91,35 +84,40 @@
 
   h2 {
     text-align: center;
-    margin-bottom: 40px;
     font-size: 32px;
+    margin-bottom: 40px;
   }
 
-  /* SERVICES */
+  /* SERVICE CARDS */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
   }
 
-  .card {
-    background: #1a1a1a;
-    padding: 25px;
-    border-radius: 10px;
+  .box {
+    background: #151515;
+    padding: 28px;
+    border-radius: 12px;
     border: 1px solid #2a2a2a;
+    transition: 0.3s;
   }
 
-  .card h3 {
+  .box:hover {
+    transform: translateY(-5px);
+    border-color: #fff;
+  }
+
+  .box h3 {
     margin-bottom: 10px;
-    color: #fff;
   }
 
-  .card p {
+  .box p {
     color: #bbb;
   }
 
   /* FORM */
-  .form-container {
+  .quote {
     background: #151515;
     padding: 30px;
     border-radius: 10px;
@@ -138,18 +136,34 @@
   button {
     width: 100%;
     padding: 14px;
-    background: #ffffff;
+    background: #fff;
     border: none;
     font-weight: bold;
     cursor: pointer;
   }
 
-  /* STICKY CALL BUTTON */
-  .sticky-call {
+  /* SERVICE AREAS */
+  .areas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .areas a {
+    padding: 10px 16px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* STICKY CALL */
+  .call {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #ffffff;
+    background: #fff;
     color: #000;
     padding: 14px 18px;
     border-radius: 50px;
@@ -170,16 +184,16 @@
 <!-- HERO -->
 <div class="hero">
 
-  <div class="logo-box">JE</div>
+  <div class="logo">JE</div>
 
   <h1>J and E Solutions</h1>
 
-  <p>Your Trusted Partner for Construction and Maintenance</p>
+  <p class="tagline">Reliable Construction • Maintenance • Remodeling Services</p>
+  <p class="subtext">Serving the Bay Area with dependable workmanship</p>
 
-  <p>Residential • Commercial • Industrial • Remodeling • Repairs</p>
+  <a class="btn btn-primary" href="tel:5105080216">Call Now</a>
+  <a class="btn btn-outline" href="mailto:j.and.esolutions77@gmail.com">Request Quote</a>
 
-  <a href="tel:5105080216" class="btn btn-primary">Call Now</a>
-  <a href="mailto:j.and.esolutions77@gmail.com" class="btn btn-outline">Request Quote</a>
 </div>
 
 <!-- SERVICES -->
@@ -188,66 +202,61 @@
 
   <div class="grid">
 
-    <div class="card">
+    <div class="box">
       <h3>Residential</h3>
       <p>Repairs, remodels, ADUs, and home improvements.</p>
     </div>
 
-    <div class="card">
+    <div class="box">
       <h3>Commercial</h3>
       <p>Tenant improvements, build-outs, and maintenance.</p>
     </div>
 
-    <div class="card">
+    <div class="box">
       <h3>Industrial</h3>
-      <p>Maintenance, installations, and emergency service.</p>
+      <p>Maintenance, installations, emergency service.</p>
     </div>
 
-    <div class="card">
+    <div class="box">
       <h3>General Contracting</h3>
-      <p>Electrical, plumbing, framing, and full project support.</p>
+      <p>Electrical, plumbing, framing, full project support.</p>
     </div>
 
   </div>
 </section>
 
-<!-- QUOTE FORM -->
+<!-- QUOTE -->
 <section>
   <h2>Request a Quote</h2>
 
-  <div class="form-container">
+  <div class="quote">
     <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="tel" placeholder="Phone Number" required>
+      <input type="text" placeholder="Name">
+      <input type="tel" placeholder="Phone">
       <input type="email" placeholder="Email">
-      <textarea rows="5" placeholder="Describe your project..."></textarea>
+      <textarea rows="5" placeholder="Project details..."></textarea>
       <button type="submit">Send Request</button>
     </form>
   </div>
 </section>
-<section style="padding:40px; max-width:900px; margin:auto; color:#aaa; font-size:14px;">
-  J and E Solutions is a licensed and bonded construction company serving the Bay Area, Santa Cruz, and Monterey regions.
-  We specialize in residential remodeling, commercial tenant improvements, industrial maintenance, ADU construction,
-  plumbing, electrical work, and general contracting services.
-</section>
-  <!-- SERVICE AREAS -->
-<section style="text-align:center; padding:40px;">
+
+<!-- SERVICE AREAS -->
+<section>
   <h2>Service Areas</h2>
 
-  <a href="san-jose.html">San Jose</a> |
-  <a href="santa-cruz.html">Santa Cruz</a> |
-  <a href="monterey.html">Monterey</a> |
-  <a href="bay-area.html">Bay Area</a>
+  <div class="areas">
+    <a href="san-jose.html">San Jose</a>
+    <a href="santa-cruz.html">Santa Cruz</a>
+    <a href="monterey.html">Monterey</a>
+    <a href="bay-area.html">Bay Area</a>
+  </div>
 </section>
 
 <footer>
-<footer>
-  <p>J and E Solutions © 2026</p>
-  <p>510-508-0216 • j.and.esolutions77@gmail.com</p>
+  J and E Solutions © 2026 • 510-508-0216
 </footer>
 
-<!-- STICKY CALL BUTTON -->
-<a class="sticky-call" href="tel:5105080216">Call Now</a>
+<a class="call" href="tel:5105080216">Call Now</a>
 
 </body>
 </html>
