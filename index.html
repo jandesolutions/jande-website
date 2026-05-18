@@ -1,172 +1,222 @@
-# J&E Solutions — Safe Modern Homepage Upgrade
-
-This version is simplified and stable for GitHub Pages.
-
-Replace EVERYTHING inside your current `index.html` with the code below.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>J&E Solutions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J&E Solutions</title>
 
-  <style>
-    body {
-      margin: 0;
-      background: #111;
-      color: white;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: #1a1a1a;
-    }
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
 
+  body {
+    background: #0b0b0c;
+    color: #fff;
+  }
+
+  /* HERO */
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+
+    background:
+      linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+      url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content {
+    max-width: 900px;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 20px;
+    color: #cfcfcf;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    margin: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .btn-primary {
+    background: #d4af37;
+    color: #000;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.85;
+  }
+
+  .btn-outline {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+
+  .btn-outline:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  /* SECTION */
+  section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+  }
+
+  /* SERVICES */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    background: #141416;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+  }
+
+  .card h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    color: #bbb;
+  }
+
+  /* ABOUT */
+  .about {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    color: #bbb;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .badge {
+    margin-top: 30px;
+    color: #d4af37;
+    font-weight: 600;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #222;
+    color: #777;
+  }
+
+  @media (max-width: 768px) {
     .hero h1 {
-      font-size: 56px;
-      margin-bottom: 10px;
+      font-size: 40px;
     }
-
-    .hero p {
-      font-size: 22px;
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 28px;
-      background: #f5b942;
-      color: black;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      margin: 10px;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #1f1f1f;
-      padding: 25px;
-      border-radius: 10px;
-      border: 1px solid #333;
-    }
-
-    .card h3 {
-      color: #f5b942;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: black;
-      color: #aaa;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>J&E Solutions</h1>
+  <div class="hero-content">
+    <h1>Luxury Construction. Precision Built.</h1>
 
-  <p>
-    Residential • Commercial • Industrial Construction & Maintenance
-  </p>
+    <p>
+      Residential • Commercial • Industrial Construction & Maintenance
+    </p>
 
-  <a class="button" href="tel:5105080216">Call Now</a>
-
-  <a class="button" href="mailto:j.and.esolutions77@gmail.com">
-    Request Quote
-  </a>
+    <a href="tel:5105080216" class="btn btn-primary">Call Now</a>
+    <a href="mailto:j.and.esolutions77@gmail.com" class="btn btn-outline">Request Quote</a>
+  </div>
 </div>
 
+<!-- SERVICES -->
 <section>
-  <h2>Our Services</h2>
+  <h2>Our Expertise</h2>
 
-  <div class="services">
+  <div class="grid">
 
     <div class="card">
-      <h3>Residential Remodeling</h3>
-      <p>
-        Kitchens, bathrooms, ADUs, renovations,
-        custom finishing, and home upgrades.
-      </p>
+      <h3>Residential Builds</h3>
+      <p>High-end remodeling, ADUs, kitchen & bathroom renovations, custom homes.</p>
     </div>
 
     <div class="card">
-      <h3>Commercial Construction</h3>
-      <p>
-        Commercial repair, tenant improvements,
-        and property maintenance.
-      </p>
+      <h3>Commercial Projects</h3>
+      <p>Tenant improvements, restaurant build-outs, retail spaces, structural upgrades.</p>
     </div>
 
     <div class="card">
-      <h3>Industrial Maintenance</h3>
-      <p>
-        Preventive maintenance, emergency service calls,
-        and equipment installation.
-      </p>
+      <h3>Industrial Work</h3>
+      <p>Maintenance systems, emergency repair, facility upgrades, equipment installs.</p>
     </div>
 
     <div class="card">
       <h3>General Contracting</h3>
-      <p>
-        Electrical, plumbing, framing,
-        finish work, and project management.
-      </p>
+      <p>Full-service construction management, plumbing, electrical, finishing work.</p>
     </div>
 
   </div>
 </section>
 
+<!-- ABOUT -->
 <section>
-  <h2>About J&E Solutions</h2>
+  <h2>About Us</h2>
 
-  <p style="text-align:center; max-width:800px; margin:auto; color:#ccc; font-size:20px;">
-    Proudly serving the Greater Bay Area, Santa Cruz,
-    and Monterey with reliable construction,
-    remodeling, maintenance, and repair services.
-  </p>
-
-  <p style="text-align:center; margin-top:25px; color:#f5b942;">
-    Licensed & Bonded — LIC #1128412
-  </p>
+  <div class="about">
+    J&E Solutions delivers premium construction and maintenance services
+    across the Bay Area, Santa Cruz, and Monterey. We focus on precision,
+    reliability, and long-term craftsmanship — not shortcuts.
+    
+    <div class="badge">
+      Licensed & Bonded • LIC #1128412
+    </div>
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>J&E Solutions © 2026</p>
   <p>510-508-0216 • j.and.esolutions77@gmail.com</p>
@@ -174,14 +224,3 @@ Replace EVERYTHING inside your current `index.html` with the code below.
 
 </body>
 </html>
-```
-
-# Instructions
-
-1. Open `index.html`
-2. Delete everything currently inside it
-3. Paste the new code
-4. Scroll down
-5. Click `Commit changes`
-6. Wait about 1 minute
-7. Refresh your w
