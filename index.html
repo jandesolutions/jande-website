@@ -1,20 +1,187 @@
+# J&E Solutions — Safe Modern Homepage Upgrade
+
+This version is simplified and stable for GitHub Pages.
+
+Replace EVERYTHING inside your current `index.html` with the code below.
+
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>J&E Solutions</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: #1a1a1a;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #f5b942;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1f1f1f;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+
+    .card h3 {
+      color: #f5b942;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: black;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 
-<body style="background:black;color:white;text-align:center;font-family:Arial;padding-top:100px;">
+<body>
 
-<h1>J&E Solutions</h1>
+<div class="hero">
+  <h1>J&E Solutions</h1>
 
-<p>
-Residential • Commercial • Industrial Construction
-</p>
+  <p>
+    Residential • Commercial • Industrial Construction & Maintenance
+  </p>
 
-<p>
-Licensed & Bonded LIC #1128412
-</p>
+  <a class="button" href="tel:5105080216">Call Now</a>
+
+  <a class="button" href="mailto:j.and.esolutions77@gmail.com">
+    Request Quote
+  </a>
+</div>
+
+<section>
+  <h2>Our Services</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>Residential Remodeling</h3>
+      <p>
+        Kitchens, bathrooms, ADUs, renovations,
+        custom finishing, and home upgrades.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Commercial Construction</h3>
+      <p>
+        Commercial repair, tenant improvements,
+        and property maintenance.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Industrial Maintenance</h3>
+      <p>
+        Preventive maintenance, emergency service calls,
+        and equipment installation.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>General Contracting</h3>
+      <p>
+        Electrical, plumbing, framing,
+        finish work, and project management.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>About J&E Solutions</h2>
+
+  <p style="text-align:center; max-width:800px; margin:auto; color:#ccc; font-size:20px;">
+    Proudly serving the Greater Bay Area, Santa Cruz,
+    and Monterey with reliable construction,
+    remodeling, maintenance, and repair services.
+  </p>
+
+  <p style="text-align:center; margin-top:25px; color:#f5b942;">
+    Licensed & Bonded — LIC #1128412
+  </p>
+</section>
+
+<footer>
+  <p>J&E Solutions © 2026</p>
+  <p>510-508-0216 • j.and.esolutions77@gmail.com</p>
+</footer>
 
 </body>
 </html>
+```
+
+# Instructions
+
+1. Open `index.html`
+2. Delete everything currently inside it
+3. Paste the new code
+4. Scroll down
+5. Click `Commit changes`
+6. Wait about 1 minute
+7. Refresh your w
