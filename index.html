@@ -4,11 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>J and E Solutions | Construction & Maintenance</title>
+<title>J and E Solutions</title>
 
-<meta name="description" content="J and E Solutions provides residential, commercial, and industrial construction, remodeling, and maintenance services throughout the Bay Area.">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,12 +17,12 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Inter',sans-serif;
 background:#050505;
 color:white;
+font-family:'Inter',sans-serif;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 .navbar{
 display:flex;
@@ -32,7 +30,7 @@ justify-content:space-between;
 align-items:center;
 padding:20px 50px;
 background:black;
-border-bottom:1px solid #1f1f1f;
+border-bottom:1px solid #181818;
 }
 
 .logo-wrap{
@@ -42,70 +40,72 @@ gap:20px;
 }
 
 .logo-wrap img{
-width:120px;
-background:none;
-mix-blend-mode:screen;
+width:110px;
 }
 
 .logo-text h1{
-font-size:34px;
-font-weight:800;
+font-family:'Oswald',sans-serif;
+font-size:62px;
+line-height:1;
+letter-spacing:1px;
 }
 
 .logo-text p{
-color:#ff8a00;
-font-size:15px;
+color:#ff8400;
+font-size:18px;
 font-weight:700;
 margin-top:5px;
+}
+
+.nav-links{
+display:flex;
+gap:40px;
 }
 
 .nav-links a{
 color:white;
 text-decoration:none;
-margin-left:30px;
-font-weight:600;
-transition:0.3s;
+font-weight:700;
+font-size:16px;
+position:relative;
 }
 
 .nav-links a:hover{
-color:#ff8a00;
+color:#ff8400;
 }
 
 /* HERO */
 
 .hero{
-display:flex;
+display:grid;
+grid-template-columns:1fr 1fr;
 align-items:center;
-padding:80px 50px;
-
-background:
-linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1600&auto=format&fit=crop');
-
-background-size:cover;
-background-position:center;
+min-height:620px;
+background:black;
+overflow:hidden;
 }
 
-.hero-content{
-max-width:650px;
+.hero-left{
+padding:60px;
 }
 
-.hero h2{
-font-size:82px;
+.hero-left h2{
+font-family:'Oswald',sans-serif;
+font-size:110px;
 line-height:0.95;
-font-weight:800;
-margin-bottom:25px;
+margin-bottom:30px;
 }
 
 .orange{
-color:#ff8a00;
+color:#ff8400;
 }
 
-.hero p{
-font-size:22px;
+.hero-left p{
+font-size:28px;
 line-height:1.5;
-color:#d4d4d4;
+color:#d0d0d0;
 margin-bottom:35px;
+max-width:650px;
 }
 
 .hero-buttons{
@@ -115,21 +115,21 @@ flex-wrap:wrap;
 }
 
 .btn{
-padding:18px 32px;
-border-radius:6px;
-text-decoration:none;
+padding:20px 34px;
 font-weight:700;
-display:inline-block;
+text-decoration:none;
+border-radius:4px;
 transition:0.3s;
+display:inline-block;
 }
 
 .btn-primary{
-background:#ff8a00;
+background:#ff8400;
 color:white;
 }
 
 .btn-primary:hover{
-background:#ff9f2e;
+background:#ff9d2e;
 }
 
 .btn-outline{
@@ -142,90 +142,93 @@ background:white;
 color:black;
 }
 
-/* SECTIONS */
+.hero-right{
+height:100%;
+background:
+linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1600&auto=format&fit=crop');
 
-section{
-padding:70px 40px;
-}
-
-.section-title{
-text-align:center;
-font-size:42px;
-font-weight:800;
-margin-bottom:50px;
+background-size:cover;
+background-position:center;
 }
 
 /* SERVICES */
 
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.services{
+padding:35px 40px;
+background:#080808;
 }
 
-.service-box{
-background:#101010;
-border:1px solid #222;
+.services-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.service-card{
+background:#111;
 padding:35px;
-border-radius:12px;
+border:1px solid #222;
 transition:0.3s;
 }
 
-.service-box:hover{
-transform:translateY(-8px);
-border-color:#ff8a00;
+.service-card:hover{
+border-color:#ff8400;
+transform:translateY(-5px);
 }
 
-.service-box h3{
-font-size:28px;
+.service-card h3{
+font-family:'Oswald',sans-serif;
+font-size:34px;
 margin-bottom:15px;
 }
 
-.service-box p{
+.service-card p{
 color:#bdbdbd;
 line-height:1.6;
 }
 
-/* QUOTE + AREAS */
+/* BOTTOM PANELS */
 
-.bottom-grid{
+.bottom{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:30px;
+gap:25px;
+padding:40px;
 }
 
 .panel{
 background:#101010;
 border:1px solid #222;
-border-radius:12px;
-padding:30px;
+padding:35px;
 }
 
 .panel h3{
-font-size:32px;
+font-family:'Oswald',sans-serif;
+font-size:40px;
 margin-bottom:25px;
 }
 
 input, textarea{
 width:100%;
-padding:14px;
+padding:16px;
 margin-bottom:15px;
+background:#181818;
 border:none;
-border-radius:6px;
-background:#1a1a1a;
 color:white;
 }
 
 button{
 width:100%;
-padding:16px;
-background:#ff8a00;
+padding:18px;
+background:#ff8400;
 border:none;
-border-radius:6px;
-color:white;
 font-weight:700;
+color:white;
 cursor:pointer;
 }
+
+/* SERVICE AREAS */
 
 .area-grid{
 display:grid;
@@ -234,55 +237,94 @@ gap:15px;
 }
 
 .area-card{
-background:#181818;
-padding:35px 20px;
-border-radius:10px;
-text-align:center;
+height:170px;
+position:relative;
+overflow:hidden;
 border:1px solid #222;
-transition:0.3s;
 }
 
-.area-card:hover{
-border-color:#ff8a00;
-transform:translateY(-5px);
+.area-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.6);
 }
 
-.area-card a{
-color:white;
-text-decoration:none;
-font-weight:700;
+.area-name{
+position:absolute;
+bottom:20px;
+left:20px;
+font-family:'Oswald',sans-serif;
+font-size:30px;
 }
 
 /* FOOTER */
 
 footer{
-background:black;
-padding:40px;
+padding:35px;
 text-align:center;
-color:#888;
-margin-top:50px;
 border-top:1px solid #222;
+color:#888;
+background:black;
 }
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:1000px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.hero-left h2{
+font-size:72px;
+}
+
+.services-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.bottom{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:700px){
 
 .navbar{
 flex-direction:column;
 gap:20px;
 }
 
-.hero{
-padding:60px 25px;
+.nav-links{
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.hero h2{
-font-size:56px;
+.hero-left{
+padding:40px 25px;
 }
 
-.bottom-grid{
+.hero-left h2{
+font-size:54px;
+}
+
+.hero-left p{
+font-size:20px;
+}
+
+.services-grid{
 grid-template-columns:1fr;
+}
+
+.area-grid{
+grid-template-columns:1fr;
+}
+
+.logo-text h1{
+font-size:42px;
 }
 
 }
@@ -292,26 +334,26 @@ grid-template-columns:1fr;
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 
 <div class="navbar">
 
 <div class="logo-wrap">
 
-<img src="logo.png" alt="J and E Solutions Logo">
+<img src="logo.png">
 
 <div class="logo-text">
-<h1>J and E Solutions</h1>
+<h1>J AND E SOLUTIONS</h1>
 <p>GENERAL CONTRACTING AND INDUSTRIAL</p>
 </div>
 
 </div>
 
 <div class="nav-links">
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Service Areas</a>
-<a href="#">Contact</a>
+<a href="#">HOME</a>
+<a href="#">SERVICES</a>
+<a href="#">SERVICE AREAS</a>
+<a href="#">CONTACT</a>
 </div>
 
 </div>
@@ -320,7 +362,7 @@ grid-template-columns:1fr;
 
 <div class="hero">
 
-<div class="hero-content">
+<div class="hero-left">
 
 <h2>
 BUILT ON QUALITY.<br>
@@ -328,67 +370,64 @@ BUILT ON QUALITY.<br>
 </h2>
 
 <p>
-Reliable construction, maintenance, and remodeling services
-for residential, commercial, and industrial clients.
+Reliable construction, maintenance, and remodeling services for residential, commercial, and industrial clients.
 </p>
 
 <div class="hero-buttons">
 
 <a href="tel:5105080216" class="btn btn-primary">
-Call Now
+CALL NOW
 </a>
 
 <a href="mailto:j.and.esolutions77@gmail.com" class="btn btn-outline">
-Request Quote
+REQUEST QUOTE
 </a>
 
 </div>
 
 </div>
+
+<div class="hero-right"></div>
 
 </div>
 
 <!-- SERVICES -->
 
-<section>
-
-<h2 class="section-title">Our Services</h2>
+<section class="services">
 
 <div class="services-grid">
 
-<div class="service-box">
+<div class="service-card">
 <h3>Residential</h3>
-<p>Home repairs, remodels, ADUs, and general improvements.</p>
+<p>Home repairs, remodels, ADUs, and residential improvements.</p>
 </div>
 
-<div class="service-box">
+<div class="service-card">
 <h3>Commercial</h3>
-<p> Restaurant improvements, maintenance, Service calls and build-outs.</p>
+<p>Commercial build-outs, maintenance, and tenant improvements.</p>
 </div>
 
-<div class="service-box">
+<div class="service-card">
 <h3>Industrial</h3>
 <p>Industrial maintenance, installations, and repairs.</p>
 </div>
 
-<div class="service-box">
+<div class="service-card">
 <h3>General Contracting</h3>
-<p>Electrical, plumbing, framing, and project support.</p>
+<p>Electrical, plumbing, framing, and project management.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- QUOTE + AREAS -->
+<!-- BOTTOM -->
 
-<section>
-
-<div class="bottom-grid">
+<section class="bottom">
 
 <div class="panel">
 
-<h3>Request a Quote</h3>
+<h3>REQUEST A QUOTE</h3>
 
 <form>
 
@@ -400,7 +439,7 @@ Request Quote
 
 <textarea rows="5" placeholder="Tell us about your project"></textarea>
 
-<button type="submit">Send Request</button>
+<button>SEND REQUEST</button>
 
 </form>
 
@@ -408,26 +447,28 @@ Request Quote
 
 <div class="panel">
 
-<h3>Service Areas</h3>
+<h3>SERVICE AREAS</h3>
 
 <div class="area-grid">
 
 <div class="area-card">
-<a href="san-jose.html">San Jose</a>
+<img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1200&auto=format&fit=crop">
+<div class="area-name">SAN JOSE</div>
 </div>
 
 <div class="area-card">
-<a href="santa-cruz.html">Santa Cruz</a>
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+<div class="area-name">SANTA CRUZ</div>
 </div>
 
 <div class="area-card">
-<a href="monterey.html">Monterey</a>
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+<div class="area-name">MONTEREY</div>
 </div>
 
 <div class="area-card">
-<a href="bay-area.html">Bay Area</a>
-</div>
-
+<img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1200&auto=format&fit=crop">
+<div class="area-name">BAY AREA</div>
 </div>
 
 </div>
@@ -438,11 +479,7 @@ Request Quote
 
 <footer>
 
-<p>J and E Solutions © 2026</p>
-
-<p>
-510-508-0216 • j.and.esolutions77@gmail.com
-</p>
+J and E Solutions © 2026
 
 </footer>
 
