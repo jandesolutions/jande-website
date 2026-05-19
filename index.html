@@ -17,9 +17,20 @@ box-sizing:border-box;
 }
 
 body{
-background:#050505;
+background:#070707;
 color:white;
 font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+/* GLOBAL STYLING */
+
+section{
+padding:70px 50px;
+}
+
+.orange{
+color:#ff8800;
 }
 
 /* NAVBAR */
@@ -29,8 +40,12 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 50px;
-background:black;
-border-bottom:1px solid #181818;
+background:rgba(0,0,0,0.92);
+border-bottom:1px solid #1d1d1d;
+position:sticky;
+top:0;
+z-index:1000;
+backdrop-filter:blur(8px);
 }
 
 .logo-wrap{
@@ -40,72 +55,72 @@ gap:20px;
 }
 
 .logo-wrap img{
-width:110px;
+width:105px;
 }
 
 .logo-text h1{
 font-family:'Oswald',sans-serif;
-font-size:62px;
+font-size:58px;
 line-height:1;
 letter-spacing:1px;
 }
 
 .logo-text p{
-color:#ff8400;
-font-size:18px;
+font-size:16px;
 font-weight:700;
-margin-top:5px;
+color:#ff8800;
+margin-top:4px;
 }
 
 .nav-links{
 display:flex;
-gap:40px;
+gap:35px;
 }
 
 .nav-links a{
 color:white;
 text-decoration:none;
 font-weight:700;
-font-size:16px;
-position:relative;
+font-size:15px;
+transition:0.3s;
 }
 
 .nav-links a:hover{
-color:#ff8400;
+color:#ff8800;
 }
 
 /* HERO */
 
 .hero{
+min-height:100vh;
 display:grid;
 grid-template-columns:1fr 1fr;
-align-items:center;
-min-height:620px;
-background:black;
-overflow:hidden;
+background:#050505;
 }
 
 .hero-left{
-padding:60px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:70px;
+background:
+linear-gradient(to right, rgba(0,0,0,0.95), rgba(0,0,0,0.78));
 }
 
 .hero-left h2{
 font-family:'Oswald',sans-serif;
-font-size:110px;
-line-height:0.95;
+font-size:115px;
+line-height:0.92;
 margin-bottom:30px;
-}
-
-.orange{
-color:#ff8400;
+text-transform:uppercase;
 }
 
 .hero-left p{
-font-size:28px;
-line-height:1.5;
+font-size:24px;
+line-height:1.6;
 color:#d0d0d0;
-margin-bottom:35px;
 max-width:650px;
+margin-bottom:40px;
 }
 
 .hero-buttons{
@@ -115,21 +130,24 @@ flex-wrap:wrap;
 }
 
 .btn{
-padding:20px 34px;
-font-weight:700;
+padding:20px 36px;
 text-decoration:none;
+font-weight:700;
 border-radius:4px;
 transition:0.3s;
 display:inline-block;
+letter-spacing:0.5px;
 }
 
 .btn-primary{
-background:#ff8400;
+background:#ff8800;
 color:white;
+box-shadow:0 0 20px rgba(255,136,0,0.25);
 }
 
 .btn-primary:hover{
-background:#ff9d2e;
+background:#ffa126;
+transform:translateY(-3px);
 }
 
 .btn-outline{
@@ -143,11 +161,8 @@ color:black;
 }
 
 .hero-right{
-height:100%;
-min-height:620px;
-
-background-image:
-linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+background:
+linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.42)),
 url('hero.jpg');
 
 background-size:cover;
@@ -158,57 +173,79 @@ background-repeat:no-repeat;
 /* SERVICES */
 
 .services{
-padding:35px 40px;
-background:#080808;
+background:#0b0b0b;
+border-top:1px solid #181818;
+border-bottom:1px solid #181818;
+}
+
+.section-title{
+font-family:'Oswald',sans-serif;
+font-size:60px;
+margin-bottom:45px;
+text-align:center;
 }
 
 .services-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:20px;
+gap:25px;
 }
 
 .service-card{
-background:#111;
-padding:35px;
-border:1px solid #222;
-transition:0.3s;
+background:#121212;
+padding:38px;
+border:1px solid #242424;
+transition:0.35s;
+position:relative;
+overflow:hidden;
+}
+
+.service-card:before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:4px;
+height:100%;
+background:#ff8800;
 }
 
 .service-card:hover{
-border-color:#ff8400;
-transform:translateY(-5px);
+transform:translateY(-8px);
+border-color:#ff8800;
+box-shadow:0 0 30px rgba(255,136,0,0.12);
 }
 
 .service-card h3{
 font-family:'Oswald',sans-serif;
 font-size:34px;
-margin-bottom:15px;
+margin-bottom:18px;
 }
 
 .service-card p{
 color:#bdbdbd;
-line-height:1.6;
+line-height:1.7;
+font-size:16px;
 }
 
-/* BOTTOM PANELS */
+/* LOWER SECTION */
 
 .bottom{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:25px;
-padding:40px;
+gap:30px;
+background:#080808;
 }
 
 .panel{
-background:#101010;
-border:1px solid #222;
+background:#111;
+border:1px solid #242424;
 padding:35px;
 }
 
 .panel h3{
 font-family:'Oswald',sans-serif;
-font-size:40px;
+font-size:42px;
 margin-bottom:25px;
 }
 
@@ -216,22 +253,26 @@ input, textarea{
 width:100%;
 padding:16px;
 margin-bottom:15px;
-background:#181818;
-border:none;
+background:#1b1b1b;
+border:1px solid #2a2a2a;
 color:white;
+font-size:15px;
 }
 
 button{
 width:100%;
 padding:18px;
-background:#ff8400;
+background:#ff8800;
 border:none;
 font-weight:700;
 color:white;
 cursor:pointer;
+transition:0.3s;
 }
 
-/* SERVICE AREAS */
+button:hover{
+background:#ffa126;
+}
 
 .area-grid{
 display:grid;
@@ -240,47 +281,57 @@ gap:15px;
 }
 
 .area-card{
-height:170px;
+background:#181818;
+height:180px;
+display:flex;
+align-items:flex-end;
+padding:20px;
+border:1px solid #252525;
+transition:0.3s;
 position:relative;
 overflow:hidden;
-border:1px solid #222;
 }
 
-.area-card img{
-width:100%;
-height:100%;
-object-fit:cover;
-filter:brightness(0.6);
+.area-card:hover{
+border-color:#ff8800;
+transform:translateY(-5px);
 }
 
-.area-name{
+.area-card:before{
+content:'';
 position:absolute;
-bottom:20px;
-left:20px;
+inset:0;
+background:
+linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.65));
+}
+
+.area-card span{
+position:relative;
 font-family:'Oswald',sans-serif;
 font-size:30px;
+z-index:2;
 }
 
 /* FOOTER */
 
 footer{
-padding:35px;
+padding:40px;
 text-align:center;
-border-top:1px solid #222;
-color:#888;
 background:black;
+border-top:1px solid #1d1d1d;
+color:#777;
 }
 
 /* MOBILE */
 
-@media(max-width:1000px){
+@media(max-width:1100px){
 
 .hero{
 grid-template-columns:1fr;
 }
 
-.hero-left h2{
-font-size:72px;
+.hero-right{
+min-height:450px;
 }
 
 .services-grid{
@@ -289,6 +340,10 @@ grid-template-columns:1fr 1fr;
 
 .bottom{
 grid-template-columns:1fr;
+}
+
+.hero-left h2{
+font-size:82px;
 }
 
 }
@@ -298,20 +353,21 @@ grid-template-columns:1fr;
 .navbar{
 flex-direction:column;
 gap:20px;
+padding:20px;
 }
 
 .nav-links{
-gap:20px;
 flex-wrap:wrap;
 justify-content:center;
+gap:18px;
 }
 
 .hero-left{
-padding:40px 25px;
+padding:45px 25px;
 }
 
 .hero-left h2{
-font-size:54px;
+font-size:58px;
 }
 
 .hero-left p{
@@ -330,6 +386,10 @@ grid-template-columns:1fr;
 font-size:42px;
 }
 
+.section-title{
+font-size:42px;
+}
+
 }
 
 </style>
@@ -337,17 +397,17 @@ font-size:42px;
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 
 <div class="navbar">
 
 <div class="logo-wrap">
 
-<img src="logo.png">
+<img src="logo.png" alt="J and E Solutions Logo">
 
 <div class="logo-text">
 <h1>J AND E SOLUTIONS</h1>
-<p>GENERAL CONTRACTING AND INDUSTRIAL</p>
+<p>GENERAL CONTRACTING & INDUSTRIAL</p>
 </div>
 
 </div>
@@ -355,7 +415,7 @@ font-size:42px;
 <div class="nav-links">
 <a href="#">HOME</a>
 <a href="#">SERVICES</a>
-<a href="#">SERVICE AREAS</a>
+<a href="#">AREAS</a>
 <a href="#">CONTACT</a>
 </div>
 
@@ -368,12 +428,12 @@ font-size:42px;
 <div class="hero-left">
 
 <h2>
-BUILT ON QUALITY.<br>
-<span class="orange">FOCUSED ON SOLUTIONS.</span>
+BUILT TO LAST.<br>
+<span class="orange">DRIVEN BY SOLUTIONS.</span>
 </h2>
 
 <p>
-Reliable construction, maintenance, and remodeling services for residential, commercial, and industrial clients.
+Construction, remodeling, maintenance, and industrial services designed around quality workmanship and dependable results.
 </p>
 
 <div class="hero-buttons">
@@ -398,33 +458,37 @@ REQUEST QUOTE
 
 <section class="services">
 
+<h2 class="section-title">
+OUR SERVICES
+</h2>
+
 <div class="services-grid">
 
 <div class="service-card">
 <h3>Residential</h3>
-<p>Home repairs, remodels, ADUs, and residential improvements.</p>
+<p>Custom remodels, repairs, ADUs, renovations, and home improvement solutions.</p>
 </div>
 
 <div class="service-card">
 <h3>Commercial</h3>
-<p>Commercial build-outs, maintenance, and tenant improvements.</p>
+<p>Commercial build-outs, maintenance programs, and tenant improvements.</p>
 </div>
 
 <div class="service-card">
 <h3>Industrial</h3>
-<p>Industrial maintenance, installations, and repairs.</p>
+<p>Industrial maintenance, equipment support, installations, and repairs.</p>
 </div>
 
 <div class="service-card">
 <h3>General Contracting</h3>
-<p>Electrical, plumbing, framing, and project management.</p>
+<p>Electrical, plumbing, framing, construction support, and project coordination.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- BOTTOM -->
+<!-- LOWER SECTION -->
 
 <section class="bottom">
 
@@ -454,25 +518,13 @@ REQUEST QUOTE
 
 <div class="area-grid">
 
-<div class="area-card">
-<img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1200&auto=format&fit=crop">
-<div class="area-name">SAN JOSE</div>
-</div>
+<div class="area-card"><span>SAN JOSE</span></div>
 
-<div class="area-card">
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
-<div class="area-name">SANTA CRUZ</div>
-</div>
+<div class="area-card"><span>SANTA CRUZ</span></div>
 
-<div class="area-card">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
-<div class="area-name">MONTEREY</div>
-</div>
+<div class="area-card"><span>MONTEREY</span></div>
 
-<div class="area-card">
-<img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=1200&auto=format&fit=crop">
-<div class="area-name">BAY AREA</div>
-</div>
+<div class="area-card"><span>BAY AREA</span></div>
 
 </div>
 
@@ -482,7 +534,7 @@ REQUEST QUOTE
 
 <footer>
 
-J and E Solutions © 2026
+J and E Solutions © 2026 • 510-508-0216
 
 </footer>
 
