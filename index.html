@@ -1,8 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>J and E Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* FULLSCREEN WORKSHOP BACKGROUND */
+
+.hero{
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.72)),
+url('hero.jpg');
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+display:flex;
+align-items:center;
+padding:80px;
+
+position:relative;
+}
+
+/* ORANGE ATMOSPHERE */
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+
+background:
+radial-gradient(circle at 80% 30%, rgba(255,140,0,0.15), transparent 35%),
+radial-gradient(circle at 20% 70%, rgba(255,140,0,0.08), transparent 45%);
+}
+
+/* FLOATING GLASS PANEL */
+
+.hero-content{
+position:relative;
+z-index:2;
+
+background:rgba(0,0,0,0.42);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,0.08);
+
+padding:60px;
+
+max-width:720px;
+
+box-shadow:
+0 0 50px rgba(0,0,0,0.4),
+0 0 80px rgba(255,140,0,0.08);
+}
+
+/* LOGO */
+
+.logo{
+width:120px;
+margin-bottom:30px;
+}
+
+/* HEADLINE */
+
+.hero h1{
+font-family:'Oswald',sans-serif;
+font-size:110px;
+line-height:0.9;
+margin-bottom:25px;
+letter-spacing:2px;
+}
+
+.hero h1 span{
+color:#ff8a00;
+}
+
+/* TEXT */
+
+.hero p{
+font-size:24px;
+line-height:1.6;
+color:#d0d0d0;
+margin-bottom:35px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:18px 34px;
+font-weight:700;
+text-decoration:none;
+border-radius:4px;
+transition:0.3s;
+display:inline-block;
+}
+
+.btn-primary{
+background:#ff8a00;
+color:white;
+box-shadow:0 0 25px rgba(255,138,0,0.25);
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:black;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+padding:25px;
+}
+
+.hero-content{
+padding:35px;
+}
+
+.hero h1{
+font-size:62px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
 <div class="hero">
 
-<div class="hero-overlay">
+<div class="hero-content">
 
-<div class="hero-panel">
+<img src="logo.png" class="logo">
 
 <h1>
 J AND E<br>
@@ -15,11 +187,11 @@ Construction • Remodeling • Industrial Maintenance
 
 <div class="hero-buttons">
 
-<a href="tel:5105080216" class="btn-primary">
+<a href="tel:5105080216" class="btn btn-primary">
 CALL NOW
 </a>
 
-<a href="mailto:j.and.esolutions77@gmail.com" class="btn-outline">
+<a href="mailto:j.and.esolutions77@gmail.com" class="btn btn-outline">
 REQUEST QUOTE
 </a>
 
@@ -29,4 +201,5 @@ REQUEST QUOTE
 
 </div>
 
-</div>
+</body>
+</html>
