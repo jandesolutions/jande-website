@@ -1,20 +1,226 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>J&E Solutions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J&E Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    background: #0b0b0c;
+    color: #fff;
+  }
+
+  /* HERO */
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+
+    background:
+      linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+      url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content {
+    max-width: 900px;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 20px;
+    color: #cfcfcf;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    margin: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .btn-primary {
+    background: #d4af37;
+    color: #000;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.85;
+  }
+
+  .btn-outline {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+
+  .btn-outline:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  /* SECTION */
+  section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+  }
+
+  /* SERVICES */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    background: #141416;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+  }
+
+  .card h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    color: #bbb;
+  }
+
+  /* ABOUT */
+  .about {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    color: #bbb;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .badge {
+    margin-top: 30px;
+    color: #d4af37;
+    font-weight: 600;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #222;
+    color: #777;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 40px;
+    }
+  }
+</style>
 </head>
 
-<body style="background:black;color:white;text-align:center;font-family:Arial;padding-top:100px;">
+<body>
 
-<h1>J&E Solutions</h1>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Luxury Construction. Precision Built.</h1>
 
-<p>
-Residential • Commercial • Industrial Construction
-</p>
+    <p>
+      Residential • Commercial • Industrial Construction & Maintenance
+    </p>
 
-<p>
-Licensed & Bonded LIC #1128412
-</p>
+    <a href="tel:5105080216" class="btn btn-primary">Call Now</a>
+    <a href="mailto:j.and.esolutions77@gmail.com" class="btn btn-outline">Request Quote</a>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section>
+  <h2>Our Expertise</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Residential Builds</h3>
+      <p>High-end remodeling, ADUs, kitchen & bathroom renovations, custom homes.</p>
+    </div>
+
+    <div class="card">
+      <h3>Commercial Projects</h3>
+      <p>Tenant improvements, restaurant build-outs, retail spaces, structural upgrades.</p>
+    </div>
+
+    <div class="card">
+      <h3>Industrial Work</h3>
+      <p>Maintenance systems, emergency repair, facility upgrades, equipment installs.</p>
+    </div>
+
+    <div class="card">
+      <h3>General Contracting</h3>
+      <p>Full-service construction management, plumbing, electrical, finishing work.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <h2>About Us</h2>
+
+  <div class="about">
+    J&E Solutions delivers premium construction and maintenance services
+    across the Bay Area, Santa Cruz, and Monterey. We focus on precision,
+    reliability, and long-term craftsmanship — not shortcuts.
+    
+    <div class="badge">
+      Licensed & Bonded • LIC #1128412
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>J&E Solutions © 2026</p>
+  <p>510-508-0216 • j.and.esolutions77@gmail.com</p>
+</footer>
 
 </body>
 </html>
