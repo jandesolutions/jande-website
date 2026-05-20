@@ -3,17 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>J and E Solutions</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================
-   BASE
-========================= */
-
 *{
 margin:0;
 padding:0;
@@ -27,51 +21,33 @@ color:white;
 overflow-x:hidden;
 }
 
-/* subtle global atmosphere so everything blends */
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at 70% 20%, rgba(255,140,0,0.10), transparent 40%),
-radial-gradient(circle at 20% 80%, rgba(255,140,0,0.06), transparent 45%),
-linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.97));
-z-index:-1;
-}
-
-/* =========================
-   HERO ZONE (FULL IMMERSION)
-========================= */
-
+/* HERO - SINGLE CLEAN LAYER (NO STACKED LOOK) */
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.75)),
+linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.72)),
 url('hero.jpg');
-
 background-size:cover;
 background-position:center;
-
 display:flex;
 align-items:center;
-padding:90px;
-position:relative;
+padding:80px;
 }
 
-.hero-panel{
-background:rgba(0,0,0,0.40);
-backdrop-filter:blur(12px);
+.hero-content{
+max-width:750px;
+}
 
-padding:60px;
-max-width:720px;
-
-border-left:3px solid #ff8a00;
+.logo{
+width:120px;
+margin-bottom:25px;
 }
 
 .hero h1{
 font-family:'Oswald',sans-serif;
 font-size:110px;
 line-height:0.95;
+margin-bottom:15px;
 }
 
 .hero h1 span{
@@ -81,15 +57,21 @@ color:#ff8a00;
 .hero p{
 font-size:22px;
 color:#d0d0d0;
-margin:20px 0 30px;
+margin-bottom:30px;
 }
 
-.btn{
-display:inline-block;
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn-primary,
+.btn-outline{
 padding:18px 32px;
 font-weight:700;
 text-decoration:none;
-margin-right:12px;
+display:inline-block;
 }
 
 .btn-primary{
@@ -102,78 +84,69 @@ border:2px solid white;
 color:white;
 }
 
-/* =========================
-   SERVICE ZONE (NO CARDS — STRIP)
-========================= */
+/* SERVICES - CLEAN SINGLE ROW STYLE */
+.services{
+padding:80px 50px;
+text-align:center;
+}
 
-.services-strip{
+.services h2{
+font-family:'Oswald',sans-serif;
+font-size:54px;
+margin-bottom:40px;
+}
+
+.services-grid{
 display:flex;
-justify-content:space-between;
-align-items:center;
-padding:50px;
-background:#0b0b0b;
-border-top:1px solid #1e1e1e;
-border-bottom:1px solid #1e1e1e;
-gap:30px;
+justify-content:center;
+gap:40px;
 flex-wrap:wrap;
 }
 
-.service-item{
-display:flex;
-flex-direction:column;
-gap:8px;
-min-width:200px;
+.service{
+min-width:220px;
 }
 
-.service-item h3{
+.service h3{
 font-family:'Oswald',sans-serif;
-font-size:26px;
+font-size:28px;
+margin-bottom:10px;
 }
 
-.service-item p{
+.service p{
 color:#bdbdbd;
-font-size:14px;
+font-size:15px;
 }
 
-/* =========================
-   INFO ZONE (NO BOXES)
-========================= */
-
-.info{
+/* ABOUT */
+.about{
 padding:80px 50px;
 text-align:center;
-max-width:900px;
-margin:auto;
+background:#0b0b0b;
 }
 
-.info h2{
+.about h2{
 font-family:'Oswald',sans-serif;
 font-size:54px;
 margin-bottom:20px;
 }
 
-.info p{
+.about p{
+max-width:800px;
+margin:auto;
 font-size:20px;
 color:#cfcfcf;
 line-height:1.7;
 }
 
-/* =========================
-   QUOTE ZONE (SINGLE PANEL)
-========================= */
-
+/* QUOTE */
 .quote{
-padding:70px 50px;
-background:#0b0b0b;
+padding:80px 50px;
 }
 
 .quote-box{
-max-width:900px;
+max-width:800px;
 margin:auto;
-padding:40px;
-background:rgba(20,20,20,0.6);
-backdrop-filter:blur(10px);
-border-left:3px solid #ff8a00;
 }
 
 input, textarea{
@@ -192,30 +165,25 @@ background:#ff8a00;
 border:none;
 color:white;
 font-weight:700;
+cursor:pointer;
 }
 
-/* =========================
-   AREA ZONE (MINIMAL STRIP)
-========================= */
-
+/* AREAS */
 .areas{
+padding:60px;
 display:flex;
 justify-content:center;
-gap:30px;
-padding:50px;
+gap:25px;
 flex-wrap:wrap;
 }
 
 .area{
 font-family:'Oswald',sans-serif;
-font-size:20px;
-color:#cfcfcf;
+color:#ccc;
+font-size:18px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer{
 padding:40px;
 text-align:center;
@@ -224,103 +192,82 @@ border-top:1px solid #1f1f1f;
 }
 
 @media(max-width:900px){
-
-.hero h1{
-font-size:64px;
-}
-
-.hero{
-padding:40px;
-}
-
-.services-strip{
-flex-direction:column;
-align-items:flex-start;
-}
-
+.hero h1{font-size:70px;}
+.hero{padding:40px;}
 }
 
 </style>
 </head>
-
 <body>
 
 <!-- HERO -->
+<section class="hero">
 
-<div class="hero">
+<div class="hero-content">
+<img src="logo.png" class="logo">
 
-<div class="hero-panel">
-
-<h1>J AND <span>E</span><br>SOLUTIONS</h1>
+<h1>J AND <span>E</span> SOLUTIONS</h1>
 
 <p>Construction • Remodeling • Industrial Maintenance</p>
 
-<a class="btn btn-primary" href="tel:5105080216">CALL NOW</a>
-<a class="btn btn-outline" href="mailto:j.and.esolutions77@gmail.com">QUOTE</a>
-
+<div class="hero-buttons">
+<a href="tel:5105080216" class="btn-primary">CALL NOW</a>
+<a href="mailto:j.and.esolutions77@gmail.com" class="btn-outline">REQUEST QUOTE</a>
+</div>
 </div>
 
-</div>
+</section>
 
-<!-- SERVICES STRIP -->
+<!-- SERVICES -->
+<section class="services">
+<h2>OUR SERVICES</h2>
 
-<div class="services-strip">
-
-<div class="service-item">
+<div class="services-grid">
+<div class="service">
 <h3>Residential</h3>
-<p>Repairs & remodels</p>
+<p>Remodels, repairs, ADUs</p>
 </div>
 
-<div class="service-item">
+<div class="service">
 <h3>Commercial</h3>
 <p>Tenant improvements</p>
 </div>
 
-<div class="service-item">
+<div class="service">
 <h3>Industrial</h3>
 <p>Maintenance & installs</p>
 </div>
-
 </div>
+</section>
 
-<!-- INFO -->
-
-<div class="info">
-
-<h2>Built on Reliability</h2>
-
+<!-- ABOUT -->
+<section class="about">
+<h2>ABOUT US</h2>
 <p>
-J and E Solutions delivers construction and maintenance services across the Bay Area with a focus on quality workmanship and long-term reliability.
+J and E Solutions provides reliable construction and maintenance services across the Bay Area.
+We focus on quality workmanship, safety, and long-term client relationships.
 </p>
-
-</div>
+</section>
 
 <!-- QUOTE -->
-
-<div class="quote">
-
+<section class="quote">
 <div class="quote-box">
-
 <input placeholder="Name">
 <input placeholder="Phone">
 <textarea rows="5" placeholder="Project Details"></textarea>
 <button>SEND REQUEST</button>
-
 </div>
-
-</div>
+</section>
 
 <!-- AREAS -->
-
-<div class="areas">
-
+<section class="areas">
 <div class="area">SAN JOSE</div>
 <div class="area">SANTA CRUZ</div>
 <div class="area">MONTEREY</div>
 <div class="area">BAY AREA</div>
+</section>
 
-</div>
-
+<!-- FOOTER -->
 <footer>
 J and E Solutions © 2026 • 510-508-0216
 </footer>
