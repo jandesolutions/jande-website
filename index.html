@@ -27,14 +27,26 @@ color:white;
 overflow-x:hidden;
 }
 
+/* subtle global atmosphere so everything blends */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 70% 20%, rgba(255,140,0,0.10), transparent 40%),
+radial-gradient(circle at 20% 80%, rgba(255,140,0,0.06), transparent 45%),
+linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.97));
+z-index:-1;
+}
+
 /* =========================
-   HERO (YOUR PHOTO STYLE)
+   HERO ZONE (FULL IMMERSION)
 ========================= */
 
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
+linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.75)),
 url('hero.jpg');
 
 background-size:cover;
@@ -42,41 +54,24 @@ background-position:center;
 
 display:flex;
 align-items:center;
-padding:80px;
-
+padding:90px;
 position:relative;
 }
-
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-
-background:
-radial-gradient(circle at 75% 30%, rgba(255,140,0,0.15), transparent 40%),
-radial-gradient(circle at 20% 70%, rgba(255,140,0,0.08), transparent 45%);
-}
-
-/* FLOATING PANEL */
 
 .hero-panel{
-position:relative;
-z-index:2;
-
-background:rgba(0,0,0,0.45);
-backdrop-filter:blur(10px);
-
-border:1px solid rgba(255,255,255,0.08);
+background:rgba(0,0,0,0.40);
+backdrop-filter:blur(12px);
 
 padding:60px;
-max-width:700px;
+max-width:720px;
+
+border-left:3px solid #ff8a00;
 }
 
 .hero h1{
 font-family:'Oswald',sans-serif;
 font-size:110px;
 line-height:0.95;
-margin-bottom:20px;
 }
 
 .hero h1 span{
@@ -86,15 +81,15 @@ color:#ff8a00;
 .hero p{
 font-size:22px;
 color:#d0d0d0;
-margin-bottom:30px;
+margin:20px 0 30px;
 }
 
 .btn{
-padding:18px 32px;
-text-decoration:none;
-font-weight:700;
 display:inline-block;
-margin-right:10px;
+padding:18px 32px;
+font-weight:700;
+text-decoration:none;
+margin-right:12px;
 }
 
 .btn-primary{
@@ -108,81 +103,84 @@ color:white;
 }
 
 /* =========================
-   SERVICES (CLEAN GRID)
+   SERVICE ZONE (NO CARDS — STRIP)
 ========================= */
 
-.section{
-padding:80px 50px;
+.services-strip{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:50px;
+background:#0b0b0b;
+border-top:1px solid #1e1e1e;
+border-bottom:1px solid #1e1e1e;
+gap:30px;
+flex-wrap:wrap;
 }
 
-.title{
+.service-item{
+display:flex;
+flex-direction:column;
+gap:8px;
+min-width:200px;
+}
+
+.service-item h3{
 font-family:'Oswald',sans-serif;
-font-size:54px;
-text-align:center;
-margin-bottom:50px;
+font-size:26px;
 }
 
-.services{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.card{
-background:#111;
-border:1px solid #222;
-padding:35px;
-transition:0.3s;
-}
-
-.card:hover{
-border-color:#ff8a00;
-transform:translateY(-6px);
-}
-
-.card h3{
-font-family:'Oswald',sans-serif;
-font-size:30px;
-margin-bottom:10px;
-}
-
-.card p{
+.service-item p{
 color:#bdbdbd;
-line-height:1.6;
+font-size:14px;
 }
 
 /* =========================
-   ABOUT
+   INFO ZONE (NO BOXES)
 ========================= */
 
-.about{
-background:#0b0b0b;
+.info{
+padding:80px 50px;
 text-align:center;
+max-width:900px;
+margin:auto;
 }
 
-.about p{
-max-width:800px;
-margin:0 auto;
+.info h2{
+font-family:'Oswald',sans-serif;
+font-size:54px;
+margin-bottom:20px;
+}
+
+.info p{
 font-size:20px;
-color:#ccc;
+color:#cfcfcf;
 line-height:1.7;
 }
 
 /* =========================
-   QUOTE FORM
+   QUOTE ZONE (SINGLE PANEL)
 ========================= */
 
-.form{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
+.quote{
+padding:70px 50px;
+background:#0b0b0b;
+}
+
+.quote-box{
+max-width:900px;
+margin:auto;
+padding:40px;
+background:rgba(20,20,20,0.6);
+backdrop-filter:blur(10px);
+border-left:3px solid #ff8a00;
 }
 
 input, textarea{
 width:100%;
 padding:15px;
-margin-bottom:15px;
-background:#1a1a1a;
+margin-bottom:12px;
+background:#151515;
 border:1px solid #2a2a2a;
 color:white;
 }
@@ -197,21 +195,21 @@ font-weight:700;
 }
 
 /* =========================
-   AREAS
+   AREA ZONE (MINIMAL STRIP)
 ========================= */
 
 .areas{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
+display:flex;
+justify-content:center;
+gap:30px;
+padding:50px;
+flex-wrap:wrap;
 }
 
 .area{
-background:#111;
-padding:25px;
-border:1px solid #222;
-text-align:center;
 font-family:'Oswald',sans-serif;
+font-size:20px;
+color:#cfcfcf;
 }
 
 /* =========================
@@ -221,30 +219,23 @@ font-family:'Oswald',sans-serif;
 footer{
 padding:40px;
 text-align:center;
-border-top:1px solid #1f1f1f;
 color:#777;
+border-top:1px solid #1f1f1f;
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media(max-width:900px){
 
 .hero h1{
-font-size:70px;
+font-size:64px;
 }
 
-.services{
-grid-template-columns:1fr;
+.hero{
+padding:40px;
 }
 
-.form{
-grid-template-columns:1fr;
-}
-
-.areas{
-grid-template-columns:1fr 1fr;
+.services-strip{
+flex-direction:column;
+align-items:flex-start;
 }
 
 }
@@ -271,74 +262,55 @@ grid-template-columns:1fr 1fr;
 
 </div>
 
-<!-- SERVICES -->
+<!-- SERVICES STRIP -->
 
-<section class="section">
+<div class="services-strip">
 
-<div class="title">OUR SERVICES</div>
-
-<div class="services">
-
-<div class="card">
+<div class="service-item">
 <h3>Residential</h3>
-<p>Remodels, repairs, ADUs, renovations.</p>
+<p>Repairs & remodels</p>
 </div>
 
-<div class="card">
+<div class="service-item">
 <h3>Commercial</h3>
-<p>Tenant improvements and maintenance.</p>
+<p>Tenant improvements</p>
 </div>
 
-<div class="card">
+<div class="service-item">
 <h3>Industrial</h3>
-<p>Equipment and facility maintenance.</p>
+<p>Maintenance & installs</p>
 </div>
 
 </div>
 
-</section>
+<!-- INFO -->
 
-<!-- ABOUT -->
+<div class="info">
 
-<section class="section about">
-
-<div class="title">ABOUT US</div>
+<h2>Built on Reliability</h2>
 
 <p>
-J and E Solutions provides reliable construction and maintenance services across the Bay Area.
-We focus on quality workmanship, safety, and long-term client relationships.
+J and E Solutions delivers construction and maintenance services across the Bay Area with a focus on quality workmanship and long-term reliability.
 </p>
 
-</section>
+</div>
 
 <!-- QUOTE -->
 
-<section class="section">
+<div class="quote">
 
-<div class="title">REQUEST A QUOTE</div>
+<div class="quote-box">
 
-<div class="form">
-
-<div>
 <input placeholder="Name">
 <input placeholder="Phone">
-<input placeholder="Email">
-</div>
-
-<div>
-<textarea rows="6" placeholder="Project Details"></textarea>
-<button>SEND</button>
-</div>
+<textarea rows="5" placeholder="Project Details"></textarea>
+<button>SEND REQUEST</button>
 
 </div>
 
-</section>
+</div>
 
 <!-- AREAS -->
-
-<section class="section">
-
-<div class="title">SERVICE AREAS</div>
 
 <div class="areas">
 
@@ -348,10 +320,6 @@ We focus on quality workmanship, safety, and long-term client relationships.
 <div class="area">BAY AREA</div>
 
 </div>
-
-</section>
-
-<!-- FOOTER -->
 
 <footer>
 J and E Solutions © 2026 • 510-508-0216
