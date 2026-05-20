@@ -10,6 +10,10 @@
 
 <style>
 
+/* =========================
+   BASE
+========================= */
+
 *{
 margin:0;
 padding:0;
@@ -23,18 +27,18 @@ color:white;
 overflow-x:hidden;
 }
 
-/* FULLSCREEN WORKSHOP BACKGROUND */
+/* =========================
+   HERO (YOUR PHOTO STYLE)
+========================= */
 
 .hero{
 height:100vh;
-
 background:
-linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.72)),
+linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
 url('hero.jpg');
 
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
 
 display:flex;
 align-items:center;
@@ -43,94 +47,59 @@ padding:80px;
 position:relative;
 }
 
-/* ORANGE ATMOSPHERE */
-
 .hero::before{
 content:"";
 position:absolute;
 inset:0;
 
 background:
-radial-gradient(circle at 80% 30%, rgba(255,140,0,0.15), transparent 35%),
+radial-gradient(circle at 75% 30%, rgba(255,140,0,0.15), transparent 40%),
 radial-gradient(circle at 20% 70%, rgba(255,140,0,0.08), transparent 45%);
 }
 
-/* FLOATING GLASS PANEL */
+/* FLOATING PANEL */
 
-.hero-content{
+.hero-panel{
 position:relative;
 z-index:2;
 
-background:rgba(0,0,0,0.42);
-
+background:rgba(0,0,0,0.45);
 backdrop-filter:blur(10px);
 
 border:1px solid rgba(255,255,255,0.08);
 
 padding:60px;
-
-max-width:720px;
-
-box-shadow:
-0 0 50px rgba(0,0,0,0.4),
-0 0 80px rgba(255,140,0,0.08);
+max-width:700px;
 }
-
-/* LOGO */
-
-.logo{
-width:120px;
-margin-bottom:30px;
-}
-
-/* HEADLINE */
 
 .hero h1{
 font-family:'Oswald',sans-serif;
 font-size:110px;
-line-height:0.9;
-margin-bottom:25px;
-letter-spacing:2px;
+line-height:0.95;
+margin-bottom:20px;
 }
 
 .hero h1 span{
 color:#ff8a00;
 }
 
-/* TEXT */
-
 .hero p{
-font-size:24px;
-line-height:1.6;
+font-size:22px;
 color:#d0d0d0;
-margin-bottom:35px;
-}
-
-/* BUTTONS */
-
-.hero-buttons{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
+margin-bottom:30px;
 }
 
 .btn{
-padding:18px 34px;
-font-weight:700;
+padding:18px 32px;
 text-decoration:none;
-border-radius:4px;
-transition:0.3s;
+font-weight:700;
 display:inline-block;
+margin-right:10px;
 }
 
 .btn-primary{
 background:#ff8a00;
 color:white;
-box-shadow:0 0 25px rgba(255,138,0,0.25);
-}
-
-.btn-primary:hover{
-transform:translateY(-3px);
 }
 
 .btn-outline{
@@ -138,29 +107,144 @@ border:2px solid white;
 color:white;
 }
 
-.btn-outline:hover{
-background:white;
-color:black;
+/* =========================
+   SERVICES (CLEAN GRID)
+========================= */
+
+.section{
+padding:80px 50px;
 }
 
-/* MOBILE */
+.title{
+font-family:'Oswald',sans-serif;
+font-size:54px;
+text-align:center;
+margin-bottom:50px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.card{
+background:#111;
+border:1px solid #222;
+padding:35px;
+transition:0.3s;
+}
+
+.card:hover{
+border-color:#ff8a00;
+transform:translateY(-6px);
+}
+
+.card h3{
+font-family:'Oswald',sans-serif;
+font-size:30px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#bdbdbd;
+line-height:1.6;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+background:#0b0b0b;
+text-align:center;
+}
+
+.about p{
+max-width:800px;
+margin:0 auto;
+font-size:20px;
+color:#ccc;
+line-height:1.7;
+}
+
+/* =========================
+   QUOTE FORM
+========================= */
+
+.form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+input, textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+background:#1a1a1a;
+border:1px solid #2a2a2a;
+color:white;
+}
+
+button{
+width:100%;
+padding:18px;
+background:#ff8a00;
+border:none;
+color:white;
+font-weight:700;
+}
+
+/* =========================
+   AREAS
+========================= */
+
+.areas{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.area{
+background:#111;
+padding:25px;
+border:1px solid #222;
+text-align:center;
+font-family:'Oswald',sans-serif;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+padding:40px;
+text-align:center;
+border-top:1px solid #1f1f1f;
+color:#777;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
 
-.hero{
-padding:25px;
-}
-
-.hero-content{
-padding:35px;
-}
-
 .hero h1{
-font-size:62px;
+font-size:70px;
 }
 
-.hero p{
-font-size:20px;
+.services{
+grid-template-columns:1fr;
+}
+
+.form{
+grid-template-columns:1fr;
+}
+
+.areas{
+grid-template-columns:1fr 1fr;
 }
 
 }
@@ -170,36 +254,108 @@ font-size:20px;
 
 <body>
 
+<!-- HERO -->
+
 <div class="hero">
 
-<div class="hero-content">
+<div class="hero-panel">
 
-<img src="logo.png" class="logo">
+<h1>J AND <span>E</span><br>SOLUTIONS</h1>
 
-<h1>
-J AND E<br>
-<span>SOLUTIONS</span>
-</h1>
+<p>Construction • Remodeling • Industrial Maintenance</p>
+
+<a class="btn btn-primary" href="tel:5105080216">CALL NOW</a>
+<a class="btn btn-outline" href="mailto:j.and.esolutions77@gmail.com">QUOTE</a>
+
+</div>
+
+</div>
+
+<!-- SERVICES -->
+
+<section class="section">
+
+<div class="title">OUR SERVICES</div>
+
+<div class="services">
+
+<div class="card">
+<h3>Residential</h3>
+<p>Remodels, repairs, ADUs, renovations.</p>
+</div>
+
+<div class="card">
+<h3>Commercial</h3>
+<p>Tenant improvements and maintenance.</p>
+</div>
+
+<div class="card">
+<h3>Industrial</h3>
+<p>Equipment and facility maintenance.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section about">
+
+<div class="title">ABOUT US</div>
 
 <p>
-Construction • Remodeling • Industrial Maintenance
+J and E Solutions provides reliable construction and maintenance services across the Bay Area.
+We focus on quality workmanship, safety, and long-term client relationships.
 </p>
 
-<div class="hero-buttons">
+</section>
 
-<a href="tel:5105080216" class="btn btn-primary">
-CALL NOW
-</a>
+<!-- QUOTE -->
 
-<a href="mailto:j.and.esolutions77@gmail.com" class="btn btn-outline">
-REQUEST QUOTE
-</a>
+<section class="section">
 
+<div class="title">REQUEST A QUOTE</div>
+
+<div class="form">
+
+<div>
+<input placeholder="Name">
+<input placeholder="Phone">
+<input placeholder="Email">
+</div>
+
+<div>
+<textarea rows="6" placeholder="Project Details"></textarea>
+<button>SEND</button>
 </div>
 
 </div>
 
+</section>
+
+<!-- AREAS -->
+
+<section class="section">
+
+<div class="title">SERVICE AREAS</div>
+
+<div class="areas">
+
+<div class="area">SAN JOSE</div>
+<div class="area">SANTA CRUZ</div>
+<div class="area">MONTEREY</div>
+<div class="area">BAY AREA</div>
+
 </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+J and E Solutions © 2026 • 510-508-0216
+</footer>
 
 </body>
 </html>
