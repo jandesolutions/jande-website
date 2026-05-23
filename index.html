@@ -8,145 +8,150 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-  }
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Inter', sans-serif;
+}
 
-  /* HERO */
+body {
+background: #0b0b0c;
+color: #fff;
+}
+
+/* HERO */
 .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 40px;
 
-    background:
-      linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-      url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-  }
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop');
+background-size: cover;
+background-position: center;
+}
 
-  .hero-content {
-    max-width: 900px;
-  }
+.hero-content {
+max-width: 900px;
+}
 
-  .hero h1 {
-    font-size: 70px;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-  }
+.hero h1 {
+font-size: 70px;
+letter-spacing: 1px;
+margin-bottom: 20px;
+}
 
-  .hero p {
-    font-size: 20px;
-    color: #cfcfcf;
-    margin-bottom: 30px;
-  }
+.hero p {
+font-size: 20px;
+color: #cfcfcf;
+margin-bottom: 30px;
+}
 
-  .btn {
-    display: inline-block;
-    padding: 14px 30px;
-    margin: 10px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-  }
+.btn {
+display: inline-block;
+padding: 14px 30px;
+margin: 10px;
+border-radius: 6px;
+text-decoration: none;
+font-weight: 600;
+transition: 0.3s;
+}
 
-  .btn-primary {
-    background: #d4af37;
-    color: #000;
-  }
+.btn-primary {
+background: #d4af37;
+color: #000;
+}
 
-  .btn-primary:hover {
-    opacity: 0.85;
-  }
+.btn-primary:hover {
+opacity: 0.85;
+}
 
-  .btn-outline {
-    border: 1px solid #fff;
-    color: #fff;
-  }
+.btn-outline {
+border: 1px solid #fff;
+color: #fff;
+}
 
-  .btn-outline:hover {
-    background: #fff;
-    color: #000;
-  }
-  /* SECTION */
-  section {
-    padding: 100px 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
+.btn-outline:hover {
+background: #fff;
+color: #000;
+}
+/* SECTION */
+section {
+padding: 100px 20px;
+max-width: 1200px;
+margin: auto;
+}
 
-  h2 {
-    text-align: center;
-    font-size: 42px;
-    margin-bottom: 60px;
-    letter-spacing: 1px;
-  }
+h2 {
+text-align: center;
+font-size: 42px;
+margin-bottom: 60px;
+letter-spacing: 1px;
+}
 
-  /* SERVICES */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-  }
+/* SERVICES */
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 25px;
+}
 
-  .card {
-    background: #141416;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #222;
-    transition: 0.3s;
-  }
+.card {
+background: #141416;
+padding: 30px;
+border-radius: 12px;
+border: 1px solid #222;
+transition: 0.3s;
+}
 
-  .card:hover {
-    transform: translateY(-5px);
-    border-color: #d4af37;
-  }
+.card:hover {
+transform: translateY(-5px);
+border-color: #d4af37;
+}
 
-  .card h3 {
-    color: #d4af37;
-    margin-bottom: 10px;
-  }
+.card h3 {
+color: #d4af37;
+margin-bottom: 10px;
+}
 
-  .card p {
-    color: #bbb;
-  }
+.card p {
+color: #bbb;
+}
 
-  /* ABOUT */
-  .about {
-    text-align: center;
-    max-width: 850px;
-    margin: auto;
-    color: #bbb;
-    font-size: 18px;
-    line-height: 1.8;
-  }
+/* ABOUT */
+.about {
+text-align: center;
+max-width: 850px;
+margin: auto;
+color: #bbb;
+font-size: 18px;
+line-height: 1.8;
+}
 
-  .badge {
-    margin-top: 30px;
-    color: #d4af37;
-    font-weight: 600;
-  }
+.badge {
+margin-top: 30px;
+color: #d4af37;
+font-weight: 600;
+}
 
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 50px 20px;
-    border-top: 1px solid #222;
-    color: #777;
-  }
+/* FOOTER */
+footer {
+text-align: center;
+padding: 50px 20px;
+border-top: 1px solid #222;
+color: #777;
+}
 
-   @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 40px;
-    }
-  }
+@media (max-width: 768px) {
+.hero h1 {
+font-size: 40px;
+}
+}
 </style>
 </head>
 
@@ -160,12 +165,12 @@ style="width:250px;">
 </div>
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-content">
-    <h1>     J.and.E    Solutions  </h1>
+<div class="hero-content">
+<h1>     J.and.E    Solutions  </h1>
 
-    <p>
-      Residential • Commercial • Construction & Maintenance
-    </p>
+<p>
+Residential • Commercial • Construction & Maintenance
+</p>
 
 <a href="tel:5105080216">
 <button style="
@@ -175,59 +180,58 @@ cursor:pointer;">
 📞 510-508-0216
 </button>
 </a>
-    <a href="mailto:j.and.esolutions77@gmail.com" class="btn btn-outline">Request Quote</a>
-  </div>
+<a href="mailto:j.and.esolutions77@gmail.com" class="btn btn-outline">Request Quote</a>
 </div>
-
+</div>
 
 <!-- SERVICES -->
 <section>
-  <h2>Our Expertise</h2>
+<h2>Our Expertise</h2>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <h3>Residential Builds</h3>
-      <p> Quality remodeling, ADUs, kitchen & bathroom renovations, Custom landscape designs.</p>
-    </div>
+<div class="card">
+<h3>Residential Builds</h3>
+<p> Quality remodeling, ADUs, kitchen & bathroom renovations, Custom landscape designs.</p>
+</div>
 
-    <div class="card">
-      <h3>Commercial Projects</h3>
-      <p> Facility maintenance, restaurant build-outs, equipment installation , structural and design upgrades.</p>
-    </div>
+<div class="card">
+<h3>Commercial Projects</h3>
+<p> Facility maintenance, restaurant build-outs, equipment installation , structural and design upgrades.</p>
+</div>
 
-    <div class="card">
-      <h3>Industrial Work</h3>
-      <p> Maintain systems, emergency repair, facility upgrades, large and small quipment installs.</p>
-    </div>
+<div class="card">
+<h3>Industrial Work</h3>
+<p> Maintain systems, emergency repair, facility upgrades, large and small quipment installs.</p>
+</div>
 
-    <div class="card">
-      <h3>General Contracting</h3>
-      <p>Full-service construction management, plumbing, electrical, structural , finishing work.</p>
-    </div>
+<div class="card">
+<h3>General Contracting</h3>
+<p>Full-service construction management, plumbing, electrical, structural , finishing work.</p>
+</div>
 
-  </div>
+</div>
 </section>
 
 <!-- ABOUT -->
 <section>
-  <h2>About Us</h2>
+<h2>About Us</h2>
 
-  <div class="about">
-    J.and.E Solutions delivers quality work, construction and maintenance services
-    across the Greater Bay Area, Santa Cruz and Monterey. We focus on precision,
-    reliability, and long-term craftsmanship.
-    
-    <div class="badge">
-      Licensed & Bonded • LIC #1128412
-    </div>
-  </div>
+<div class="about">
+J.and.E Solutions delivers quality work, construction and maintenance services
+across the Greater Bay Area, Santa Cruz and Monterey. We focus on precision,
+reliability, and long-term craftsmanship.
+
+<div class="badge">
+Licensed & Bonded • LIC #1128412
+</div>
+</div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>J.and.E Solutions © 2026</p>
-  <p>510-508-0216 • j.and.esolutions77@gmail.com</p>
+<p>J.and.E Solutions © 2026</p>
+<p>510-508-0216 • j.and.esolutions77@gmail.com</p>
 </footer>
 
 
